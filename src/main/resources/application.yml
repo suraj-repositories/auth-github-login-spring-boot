@@ -1,0 +1,16 @@
+baseUrl: http://localhost:8080
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: YOUR_GITHUB_CLIENT_ID
+            client-secret: YOUR_GITHUB_CLIENT_PASSWORD
+            redirect-uri: "{baseUrl}/login/oauth2/code/github"
+            client-name: GitHub
+            scope:
+              - read:user
+              - user:email
+       
